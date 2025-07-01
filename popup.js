@@ -98,6 +98,7 @@ function renderGroups() {
     item.className = 'list-group-item d-flex justify-content-between align-items-center';
 
     const nameSpan = document.createElement('span');
+    nameSpan.className = 'group-name';  // ✅ applique la classe CSS personnalisée
     nameSpan.textContent = group.name;
     nameSpan.style.cursor = 'pointer';
 
@@ -136,6 +137,7 @@ function renderGroups() {
   }
 }
 
+
 function renderTabs() {
   const tabsContainer = document.getElementById('tabsContainer');
   const tabsList = document.getElementById('tabsList');
@@ -160,6 +162,7 @@ function renderTabs() {
     item.className = 'list-group-item d-flex justify-content-between align-items-center';
 
     const tabInfo = document.createElement('span');
+    tabInfo.className = 'tab-name';  // ✅ ajoute la classe pour alignement
     tabInfo.textContent = tab.title || tab.url;
     tabInfo.style.cursor = 'pointer';
     tabInfo.title = tab.url;
@@ -188,6 +191,7 @@ function renderTabs() {
     tabsList.appendChild(item);
   });
 }
+
 
 // Ajouter un onglet actif au groupe sélectionné
 document.getElementById('addSingleTabBtn').addEventListener('click', () => {
